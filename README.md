@@ -14,7 +14,8 @@ Every response should contain the following fields:
 * _word_: representation of the word that is being guessed. Should contain dots for letters that have not been guessed yet.
 * _tries_left_: the number of tries left to guess the word (starts at 11) 
 * _status_: current status of the game (busy|fail|success)
-### Example response (JSON):
+
+#### Example response (JSON):
 ```json
   {
   "word": "aw.so..",
