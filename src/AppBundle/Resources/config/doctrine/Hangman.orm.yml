@@ -1,0 +1,23 @@
+AppBundle\Entity\Hangman:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\HangmanRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        word:
+            type: string
+            length: 255
+        tries_left:
+            type: smallint
+        status:
+            type: string
+            length: '7'
+        guessed:
+            type: simple_array
+            null: true
+    lifecycleCallbacks: {  }
