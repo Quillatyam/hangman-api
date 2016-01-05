@@ -37,11 +37,7 @@ class Hangman
     private $guessed;
 
     public function __construct() {
-        $finder = new Finder();
-        $finder->in(__DIR__)->files()->name(chr(rand(65, 90)) . ' Words.txt');
-        $finder = $finder->getIterator();
-        $finder->rewind();
-        $words = file(dirname(__FILE__) . '/' . $finder->current()->GetRelativePathname());
+        $words = file(dirname(__FILE__) . '/words/'. chr(rand(65, 90)) . ' Words.txt');
         $this->word = str_replace(array("\r\n", "\r", "\n",), '', $words[array_rand($words) ]);
         $this->tries_left = 11;
         $this->status = 'busy';
