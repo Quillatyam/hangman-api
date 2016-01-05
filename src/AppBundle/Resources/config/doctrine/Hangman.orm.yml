@@ -19,5 +19,5 @@ AppBundle\Entity\Hangman:
             length: '7'
         guessed:
             type: simple_array
-            null: true
-    lifecycleCallbacks: {  }
+            nullable: true
+    lifecycleCallbacks: {}
