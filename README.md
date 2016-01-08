@@ -23,3 +23,9 @@ Every response should contain the following fields:
   "status": "busy"
   }
 ```
+## Installation
+1. Clone wherever
+2. Run `php composer.phar install` (you can just use the defaults)
+3. Run `php app/console doctrine:database:create` to create the database
+4. Run `php app/console doctrine:schema:update --force` to create the table
+5. Run `php app/console server:run`
